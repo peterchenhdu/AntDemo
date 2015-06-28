@@ -93,13 +93,13 @@
  		打包成war文件
 	-->
 
-	<target name="archive" depends="build" description="Create binary archive of all files in war.home">
+	<target name="archive" depends="build" description="Create binary archive of all files in dist.home">
 		
 		<!-- Create war directory -->
-		<mkdir dir="${war.home}" />
+		<mkdir dir="${dist.home}" />
 		
 		<!-- Create application WAR file -->
-	    <jar jarfile="${war.home}/${app.name}.war" basedir="${build.home}" />
+	    <jar jarfile="${dist.home}/${app.name}.war" basedir="${build.home}" />
 
 	</target>	
 	
